@@ -4,7 +4,7 @@
 <meta charset="UTF-8"> 
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 <title>AfriTalent — Accueil</title> 
-<!-- Bootstrap 5 via CDN : feuille de style --> 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"> 
 <link 
 href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
 rel="stylesheet"> 
@@ -12,11 +12,286 @@ rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body> 
-<!-- Le contenu de la page sera ajoute ici --> 
-<!-- Bootstrap 5 via CDN : script JavaScript --> 
+    
+        <!-- barre de navigation commune a toute les pages  -->
+<header>
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> 
+<div class="container"> 
+    
+  <img src="image/logo-afritalent.png" alt="logo-afritalent">
+
+<a class="navbar-brand" href="index.html">AfriTalent</a> 
+<button class="navbar-toggler" type="button" 
+data-bs-toggle="collapse" 
+data-bs-target="#navMenu" 
+aria-controls="navMenu" 
+aria-expanded="false" 
+aria-label="Toggle navigation"> 
+<span class="navbar-toggler-icon"></span> 
+</button> 
+<div class="collapse navbar-collapse" id="navMenu"> 
+<ul class="navbar-nav ms-auto"> 
+<li class="nav-item"><a class="nav-link active" href="index.html">Accueil</a></li> 
+<li class="nav-item"><a class="nav-link" href="freelances.html">Freelances</a></li> 
+<li class="nav-item"><a class="nav-link" href="tarifs.html">Tarifs</a></li> 
+<li class="nav-item"><a class="nav-link" href="about.html">A propos</a></li> 
+<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li> 
+</ul>
+<button class="btn btn-primary ms-3">Rejoindre AfriTalent</button> 
+</div> 
+</div> 
+</nav>
+</header> 
+<main>
+<!-- section barre de filtre  -->
+ <section class="barre">
+    <section class="barre-recherche">
+        <div class="barre-de-filtre">
+       <input type="text" placeholder="rechercher">
+       <select>
+       <option value="">choisir un freelence</option>
+       <option value="">dévoleppeur web</option>
+       <option value="">administrateur réseau</option>
+       <option value="">data analyst</option>
+       <option value="">expert en cybersécurité</option>
+       <option value="">chef de projet informatique</option>
+       <option value="">technicien support</option>
+       <option value="">marketing digital</option>
+       <option value="">Assistante Virtuelle</option>
+       <option value="">programeurs</option>
+       </select>
+        </div>
+        </section>
+        <section class="nom freelances">
+
+   <div class="container py-5">
+    <div class="row g-4">
+
+        <!-- Carte 1 -->
+        <div class="col-md-4">
+            <div class="card shadow-sm h-100">
+                <img src="image/55579239-homme-avec-barbe-et-des-lunettes-opere-portable-a-l-interieur-une-les-donnees-centre-rempli-avec-les-serveurs-photo.jpg" class="card-img-top" alt="Freelance">
+                <div class="card-body">
+
+                    <h5 class="card-title">Mamadou Diallo</h5>
+                    <h6 class="text-primary">Développeur Web</h6>
+                    <p class="card-text">
+                        Créateur de sites modernes et applications web responsive.
+                    </p>
+                    <p><strong>50000/mois</strong></p>
+                    <p class="text-warning">⭐⭐⭐⭐⭐</p>
+                    <a href="#" class="btn btn-primary">Voir le profil</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carte 2 -->
+        <div class="col-md-4">
+            <div class="card shadow-sm h-100">
+                <img src="image/téléchargement.jpg"card-img-top" alt="Freelance">
+                <div class="card-body">
+                    <h5 class="card-title">Aïcha Ndiaye</h5>
+                    <h6 class="text-primary">administrateur réseau</h6>
+                    <p class="card-text">
+                        Spécialiste en logos, affiches et identité visuelle.
+                    </p>
+                    <p><strong>25000/mois</strong></p>
+                    <p class="text-warning">⭐⭐⭐⭐⭐</p>
+                    <a href="#" class="btn btn-primary">Voir le profil</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carte 3 -->
+        <div class="col-md-4">
+            <div class="card shadow-sm h-100">
+                <img src="image/images (10).jpg" class="card-img-top" alt="Freelance">
+                <div class="card-body">
+                    <h5 class="card-title">Ibrahima Sow</h5>
+                    <h6 class="text-primary">data analyst</h6>
+                    <p class="card-text">
+                        Montage professionnel pour YouTube et réseaux sociaux.
+                    </p>
+                    <p><strong>18000/mois</strong></p>
+                    <p class="text-warning">⭐⭐⭐⭐</p>
+                    <a href="#" class="btn btn-primary">Voir le profil</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carte 4 -->
+        <div class="col-md-4">
+            <div class="card shadow-sm h-100">
+                <img src="image/images.jpg" class="card-img-top" alt="Freelance">
+                <div class="card-body">
+                    <h5 class="card-title">Fatou Kane</h5>
+                    <h6 class="text-primary">expert en informatique de gestion</h6>
+                    <p class="card-text">
+                        Gestion de réseaux sociaux et stratégie digitale.
+                    </p>
+                    <p><strong>22500/mois</strong></p>
+                    <p class="text-warning">⭐⭐⭐⭐</p>
+                    <a href="#" class="btn btn-primary">Voir le profil</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carte 5 -->
+        <div class="col-md-4">
+            <div class="card shadow-sm h-100">
+                <img src="image/homme-noir-finance-commercant-tapant-ordinateur-pour-bourse-site-web-crypto-monnaie-pour-paiement-mot-passe-superpose-investisseur-financier-negociant-ligne-pour-croissance-investissements-epargne-au-bureau_5.jpg" class="card-img-top" alt="Freelance">
+                <div class="card-body">
+                    <h5 class="card-title">Cheikh Ba</h5>
+                    <h6 class="text-primary">chef de projet informatique</h6>
+                    <p class="card-text">
+                        Rédaction SEO et contenus optimisés pour le web.
+                    </p>
+                    <p><strong>150000/mois</strong></p>
+                    <p class="text-warning">⭐⭐⭐⭐</p>
+                    <a href="#" class="btn btn-primary">Voir le profil</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carte 6 -->
+        <div class="col-md-4">
+            <div class="card shadow-sm h-100">
+                <img src="image/gettyimages-1411009525-612x612.jpg" class="card-img-top" alt="Freelance">
+                <div class="card-body">
+                    <h5 class="card-title">Ndeye Fall</h5>
+                    <h6 class="text-primary">marketing digital</h6>
+                    <p class="card-text">
+                        Design d’interfaces modernes et expériences utilisateurs.
+                    </p>
+                    <p><strong>30420/mois</strong></p>
+                    <p class="text-warning">⭐⭐⭐⭐</p>
+                    <a href="#" class="btn btn-primary">Voir le profil</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carte 7 -->
+        <div class="col-md-4">
+            <div class="card shadow-sm h-100">
+                <img src="image/images (4).jpg" class="card-img-top" alt="Freelance">
+                <div class="card-body">
+                    <h5 class="card-title">Ousmane Gueye</h5>
+                    <h6 class="text-primary">Développeur Mobile</h6>
+                    <p class="card-text">
+                        Création d’applications Android et iOS performantes.
+                    </p>
+                    <p><strong>28555/mois</strong></p>
+                    <p class="text-warning">⭐⭐⭐⭐⭐</p>
+                    <a href="#" class="btn btn-primary">Voir le profil</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carte 8 -->
+        <div class="col-md-4">
+            <div class="card shadow-sm h-100">
+                <img src="image/temoin4.png" class="card-img-top" alt="Freelance">
+                <div class="card-body">
+                    <h5 class="card-title">Mariama Sy</h5>
+                    <h6 class="text-primary">Assistante Virtuelle</h6>
+                    <p class="card-text">
+                        Organisation, gestion emails et support administratif.
+                    </p>
+                    <p><strong>140000/mois</strong></p>
+                    <p class="text-warning">⭐⭐⭐⭐⭐</p>
+                    <a href="#" class="btn btn-primary">Voir le profil</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carte 9 -->
+        <div class="col-md-4">
+            <div class="card shadow-sm h-100">
+                <img src="image/images (7).jpg" class="card-img-top" alt="Freelance">
+                <div class="card-body">
+                    <h5 class="card-title">Aliou Seck</h5>
+                    <h6 class="text-primary">programeurs</h6>
+                    <p class="card-text">
+                        Optimisation de visibilité et référencement Google.
+                    </p>
+                    <p><strong>260000/mois</strong></p>
+                    <p class="text-warning">⭐⭐⭐⭐⭐</p>
+                    <a href="#" class="btn btn-primary">Voir le profil</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</main>
+<footer class="bg-dark text-light pt-5 pb-4">
+  <div class="container">
+    <div class="row">
+
+      <!-- Colonne 1 : Logo + Description -->
+      <div class="col-md-3 mb-4">
+  <img src="image/logo-afritalent.png" alt="logo-afritalent">
+        
+        <p>
+          Votre entreprise spécialisée dans les solutions modernes
+          et innovantes pour le web et le digital.
+        </p>
+      </div>
+
+      <!-- Colonne 2 : Liens rapides -->
+      <div class="col-md-3 mb-4">
+        <h5 class="mb-3">liens utiles</h5>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="text-light text-decoration-none">Accueil</a></li>
+          <li><a href="freelances.html" class="text-light text-decoration-none">Services</a></li>
+          <li><a href="about.html" class="text-light text-decoration-none">À propos</a></li>
+          <li><a href="contact.html" class="text-light text-decoration-none">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Colonne 3 : Services -->
+      <div class="col-md-3 mb-4">
+        <h5 class="mb-3">Ressources</h5>
+        <ul class="list-unstyled">
+          <li>Développement Web</li>
+          <li>Design UI/UX</li>
+          <li>Marketing Digital</li>
+          <li>seo</li>
+        </ul>
+      </div>
+
+      <!-- Colonne 4 : Contact -->
+      <div class="col-md-3 mb-4">
+        <h5 class="mb-3">Contact</h5>
+        <p>Email :afritalent@gmail.com</p>
+        <p>Téléphone : +221 770455054</p>
+        <p>Dakar, Sénégal</p>
+        <div class="icone-reseaux-sosiaux">
+             
+
+        </div>
+      </div>
+      
+
+    </div>
+
+    <!-- Bas du footer -->
+    <div class="text-center border-top pt-3 mt-3">
+      <p class="mb-0">
+        &copy; 2026 MonEntreprise - Tous droits réservés
+      </p>
+      <i class="bi bi-facebook"></i>
+            <i class="bi bi-twitter"></i>
+            <i class="bi bi-instagram"></i>
+            <i class="bi bi-linkedin"></i> 
+    </div>
+  </div>
+  </footer>
+
+
 <script 
-src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-></script> 
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> 
 <!-- Votre script JavaScript --> 
 <script src="js/main.js"></script>
 </body>
