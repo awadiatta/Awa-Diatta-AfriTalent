@@ -19,15 +19,15 @@ body{
     background-color: var(--primary-color);
     color: var(--text-color);
     font-family: var(--font-body);
-    line-height: 1,6;
+    line-height: 1.6;
     padding-top: var(--navbar-height);
-    }
+}
 
 h1,h2,h3,h4,h5 {
     font-family: var(--font-title);
 }
 
-/* bare de navigation */
+/* barre de navigation */
 .logo-afritalent{
     height: 60px;
     width: auto;
@@ -38,3 +38,193 @@ h1,h2,h3,h4,h5 {
 .nav-link{
     color: var(--main-color);
 }
+.hero{
+    background-image: url(../image/5d03b67d-d5ce-4619-ada5-aacb3979a19c.jpeg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    min-height: calc(100vh - var(--navbar-height));
+    display: flex;
+    align-items: center;
+}
+.hero::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 1;
+}
+.hero-container{
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    margin: 0 auto;
+    width: min(100%, 1100px);
+    padding: 3rem 1.5rem;
+}
+.text-hero h1{
+    font-size: clamp(2.5rem, 4vw, 4.5rem);
+    line-height: 1.05;
+    margin-bottom: 1rem;
+}
+.text-hero h2{
+    font-size: clamp(1.25rem, 2vw, 1.75rem);
+    font-weight: 400;
+    margin-bottom: 2rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+.btn-hero{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+.btn-hero .btn{
+    min-width: 190px;
+}
+.stats-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.stats-box{
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 1rem;
+    padding: 1.25rem 1.5rem;
+    min-width: 170px;
+}
+.stats-box h2{
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+}
+.stats-box p{
+    margin: 0;
+    color: rgba(255, 255, 255, 0.85);
+}
+.section-header{
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.bento-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+    margin: 0 auto;
+}
+.bento-grid article {
+    background: var(--primary-color);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.bento-grid article i {
+    color: var(--main-color);
+    font-size: 2.5rem;
+}
+.bento-grid article h3 {
+    font-size: 1.25rem;
+}
+.bento-grid article p {
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+}
+.card1{grid-column: span 3;}
+.card2{grid-column: span 2;}
+.card3{grid-column: span 2;}
+.card4{grid-column: span 3}
+
+.bento-grid2{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+    margin: 0 auto;
+}
+.bento-grid2 article i {
+    color: var(--main-color);
+    font-size: 2.5rem;
+}
+.bento-grid2 article {
+    background: var(--primary-color);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.bento-grid2 article:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+}
+.bento-grid2 article:hover i {
+    color: #ffffff;
+}
+
+.CTA{
+    background-color: var(--main-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 3rem 1.5rem;
+}
+.CTA-texte p{
+    font-size: clamp(1.5rem, 2vw, 2.5rem);
+    margin-bottom: 2rem;
+}
+.CTA-btn .btn-btn{
+    background-color: #fff;
+    color: var(--main-color);
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.site-footer {
+    background-color: #070707;
+    color: #f8f9fa;
+}
+.site-footer a {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+}
+.site-footer a:hover {
+    color: #ffffff;
+}
+.site-footer .footer-logo {
+    max-width: 160px;
+    margin-bottom: 1rem;
+}
+.site-footer .social-icons a {
+    font-size: 1.25rem;
+    transition: color 0.2s ease;
+}
+.site-footer .social-icons a:hover {
+    color: var(--main-color);
+}
+.site-footer .footer-bottom {
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+
+
+
