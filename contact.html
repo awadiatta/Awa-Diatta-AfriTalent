@@ -3,7 +3,7 @@
 <head> 
 <meta charset="UTF-8"> 
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-<title>AfriTalent — Accueil</title> 
+<title>AfriTalent — Contact</title> 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 <link 
 href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
@@ -35,7 +35,10 @@ aria-label="Toggle navigation">
 <li class="nav-item"><a class="nav-link" href="tarifs.html">Tarifs</a></li> 
 <li class="nav-item"><a class="nav-link" href="about.html">A propos</a></li> 
 <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li> 
-</ul> 
+</ul>
+<button id="toggleDarkMode" class="btn btn-outline-light ms-2" title="Toggle dark/light mode">
+  <i class="bi bi-moon-fill"></i>
+</button>
 <button class="btn btn-primary ms-3">Rejoindre AfriTalent</button>
 </div> 
 </div> 
@@ -47,38 +50,33 @@ aria-label="Toggle navigation">
         <h1>contact</h1>
         <div class="formulaire">
            <form>
-             <label for="Name" class="formulaire-label">Nom</label>
-             
-                <input type="text" placeholder="votre nom">
+             <label for="nom" class="formulaire-label">Nom</label>
+             <input id="nom" name="nom" type="text" placeholder="Votre nom">
 
-              <label for="prenom" class="formulaire-label">Prenom</label>
+             <label for="prenom" class="formulaire-label">Prénom</label>
+             <input id="prenom" name="prenom" type="text" placeholder="Votre prénom">
 
-              <input type="text" placeholder="votre prenom">
+             <label for="email" class="formulaire-label">Email</label>
+             <input id="email" name="email" type="email" placeholder="Votre adresse email">
 
-              <label for="email" class="formulaire-label"> email</label>
+             <label for="message">Votre message</label>
+             <textarea id="message" name="message" placeholder="Votre message"></textarea>
 
-              <input type="text" class="formulaire-label">
-
-              <label for="message">Votre message</label>
-              <textarea id="message" placeholder="Votre message"></textarea>
-              <button type="submit" class="btn">
-               envoyer
-              </button>
+             <button type="submit" class="btn">Envoyer</button>
+           </form>
 
               <div class="informations">
-                <h3>nos informations</h3>
+                <h3>Nos informations</h3>
                 <div class="texte-contact">
-                <p>Nos informations  vous pouvez nous contacter en cas de besions</p>
+                  <p>Vous pouvez nous contacter pour toute demande ou besoin d'information.</p>
                 </div>
-                
                 <div class="contact-container">
-                <p><i class="bi bi-telephone"></i>775452525</p>
-                <p><i class="bi bi-geo-alt"></i> dakar,senegal</p>
-                <p><i class="bi bi-envelope">Afritalent@gmail.com</i></p>
+                  <p><i class="bi bi-telephone"></i>+221 770 455 054</p>
+                  <p><i class="bi bi-geo-alt"></i>Dakar, Sénégal</p>
+                  <p><i class="bi bi-envelope"></i>afritalent@gmail.com</p>
                 </div>
-
               </div>
-
+        </div>
 </section>
 <section class="iframe">
   <h1>Voici notre localisation </h1>
@@ -91,13 +89,14 @@ aria-label="Toggle navigation">
   loading="lazy">
 </iframe>
 </section>
+</main>
 <footer class="bg-dark text-light pt-5 pb-4">
   <div class="container">
     <div class="row">
 
       <!-- Colonne 1 : Logo + Description -->
       <div class="col-md-3 mb-4">
-  <img src="image/logo-afritalent.png" alt="logo-afritalent">
+  <img src="image/logo-afritalent.png" alt="logo-afritalent" class="mb-3" style="width: 150px;">
         
         <p>
           Votre entreprise spécialisée dans les solutions modernes

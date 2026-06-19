@@ -27,6 +27,103 @@ h1,h2,h3,h4,h5 {
     font-family: var(--font-title);
 }
 
+/* Light theme styles */
+
+body.theme-light {
+    --primary-color: #f7f3ee;
+    --text-color: #222222;
+    --main-color: #d17e00;
+}
+
+body.theme-light .navbar {
+    background-color: #ffffff !important;
+}
+
+body.theme-light .nav-link {
+    color: var(--main-color) !important;
+}
+
+body.theme-light .navbar-toggler-icon {
+    filter: invert(0.15) !important;
+}
+
+body.theme-light .btn-outline-light {
+    color: #111 !important;
+    border-color: rgba(0, 0, 0, 0.14) !important;
+    background: rgba(255, 255, 255, 0.85) !important;
+}
+
+body.theme-light .hero::before {
+    background: rgba(255, 255, 255, 0.55);
+}
+
+body.theme-light .carte1,
+body.theme-light .valeur,
+body.theme-light .tarif-card,
+body.theme-light .bento-grid article,
+body.theme-light .bento-grid2 article,
+body.theme-light .FAQ .accordion-item,
+body.theme-light .FAQ .accordion-body,
+body.theme-light .stats-box,
+body.theme-light .card-principale {
+    background: rgba(0, 0, 0, 0.03);
+    color: #222222;
+    border-color: rgba(0, 0, 0, 0.08);
+}
+
+body.theme-light .carte1:hover,
+body.theme-light .valeur:hover,
+body.theme-light .tarif-card:hover,
+body.theme-light .bento-grid2 article:hover {
+    background: rgba(0, 0, 0, 0.06);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+    border-color: rgba(209, 126, 0, 0.35);
+}
+
+body.theme-light .carte1 h2,
+body.theme-light .carte-body h3,
+body.theme-light .Nos-valeurs h1,
+body.theme-light .valeur h3,
+body.theme-light .valeur p,
+body.theme-light .carte-body p,
+body.theme-light .bento-grid article p,
+body.theme-light .bento-grid2 article p,
+body.theme-light .stats-box p,
+body.theme-light .FAQ .accordion-button,
+body.theme-light p {
+    color: #222222 !important;
+}
+
+body.theme-light .carte-body i,
+body.theme-light .valeur i {
+    color: var(--main-color);
+}
+
+body.theme-light .site-footer,
+body.theme-light footer {
+    background-color: #f2f2f2 !important;
+    color: #222 !important;
+}
+
+body.theme-light footer a,
+body.theme-light .site-footer a {
+    color: #222 !important;
+}
+
+body.theme-light .btn-primary {
+    color: #111 !important;
+}
+
+body.theme-light .tarif-card button {
+    color: #111 !important;
+}
+
+body.theme-light .FAQ .accordion-button:not(.collapsed) {
+    background: rgba(209, 126, 0, 0.3);
+    color: #222 !important;
+}
+
+
 /* barre de navigation */
 .logo-afritalent{
     height: 60px;
@@ -108,6 +205,17 @@ h1,h2,h3,h4,h5 {
 .section-header{
     text-align: center;
     padding-bottom: 40px;
+}
+
+
+
+@media (max-width: 767px) {
+    .tarif-card{
+        min-height: auto;
+    }
+    .tarif-card h3{
+        font-size: 1.45rem;
+    }
 }
 
 .bento-grid{
@@ -225,6 +333,506 @@ h1,h2,h3,h4,h5 {
     border-color: rgba(255, 255, 255, 0.12);
 }
 
+/* page 3 freelances */
+.barre-recherche{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    margin-top: 20px;
+}
+
+.barre-recherche input{
+    width: 100%;
+    max-width: 200px;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.1);
+    font-size: 1rem;
+}
+input::placeholder{
+    color: var(--main-color);
+}
+.barre-recherche select{
+    margin-left: 1rem;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--main-color);
+    font-size: 1rem;
+}
+.card-img-top{
+    height: 250px;
+    object-fit: cover;
+}
+.card-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    height: auto;
+}
+.card-body h5{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.card-body h6{
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+.card-body p{
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 600;
+}
+.nos-tarifs{
+    padding: 4rem 1.5rem;
+    
+}
+
+.tarif-container{
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+.tarif-card{
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 1.25rem;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 320px;
+
+}
+
+/* tarif  */
+article ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tarif-card h2{
+    text-transform: uppercase;
+    color: var(--main-color);
+    margin-bottom: 0.5rem;
+}
+
+.tarif-card h3{
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.tarif-card p{
+    margin: 0.35rem 0;
+    color: rgba(255, 255, 255, 0.88);
+    font-weight: 600;
+}
+
+.tarif-card button{
+    margin-top: 1.5rem;
+    background: var(--main-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 0.9rem 1rem;
+    border-radius: 0.75rem;
+    font-weight: 700;
+
+}
 
 
+.card-principale{
+    background: linear-gradient(180deg, rgba(255, 165, 0, 0.16), rgba(255, 165, 0, 0.08));
+    border-color: rgba(255, 165, 0, 0.35) !important;
+}
+
+
+
+/* FAQ accordion styling */
+.FAQ{
+    padding: 3rem 1.5rem 4rem;
+}
+.FAQ .accordion{
+    max-width: 960px;
+    margin: 0 auto;
+}
+.FAQ .accordion-item{
+    border: 1px solid rgba(240, 170, 6, 0.733);
+    border-radius: 1rem;
+    overflow: hidden;
+    background: rgba(255,255,255,0.03);
+    margin-bottom: 1rem;
+}
+.FAQ .accordion-button{
+    background: transparent;
+    color: rgba(255,255,255,0.95);
+    font-weight: 600;
+    padding: 1rem 1.25rem;
+    border: none;
+}
+.FAQ .accordion-button:not(.collapsed){
+    background: rgba(231, 153, 10, 0.772);
+    color: #ffffff;
+}
+.FAQ .accordion-button:focus{
+    box-shadow: 0 0 0 0.15rem rgba(255,165,0,0.25);
+}
+.FAQ .accordion-body{
+    background: rgba(255,255,255,0.04);
+    color: rgba(255,255,255,0.9);
+    padding: 1rem 1.25rem 1.5rem;
+}
+.FAQ .accordion-button::after{
+    filter: invert(1);
+}
+
+.histoire-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;;
+    gap: 2rem;
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+.img-histoire img{
+    width: 500px;
+    height: auto;
+    border-radius: 1rem;
+    padding-top: 20px;
+}
+.text-histoire p{
+    font-size: 1.5rem;
+    line-height: 2em;
+    padding-top: 20px;
+    
+}
+
+
+.a-propos {
+    padding: 4rem 1.5rem;
+}
+
+.a-propos-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: auto;
+    margin-top: 90px;
+}
+
+.carte1 {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.carte1:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
+    border-color: rgba(255, 165, 0, 0.35);
+}
+
+.carte1 img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.carte1 h2 {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+    color: var(--text-color);
+}
+
+.carte-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.carte-body h3 {
+    font-size: 1.1rem;
+    margin: 0;
+    color: var(--main-color);
+    font-weight: 600;
+}
+
+.carte-body p {
+    margin: 0.35rem 0;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.carte-body i {
+    color: var(--main-color);
+    font-size: 1rem;
+}
+
+/* Nos-valeurs section */
+
+.Nos-valeurs {
+    padding: 4rem 1.5rem 3rem;
+    max-width: 1120px;
+    margin: 0 auto;
+    display: grid;
+    gap: 2rem;
+    border-radius: 1.5rem;
+}
+
+.Nos-valeurs h1 {
+    grid-column: 1 / -1;
+    margin: 0;
+    font-size: clamp(2.5rem, 4vw, 3.2rem);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #ffffff;
+    text-align: center;
+    padding-bottom: 0.5rem;
+}
+
+.Nos-valeurs {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.valeur {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 1.25rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.valeur:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.18);
+    border-color: rgba(255, 165, 0, 0.35);
+}
+
+.valeur i {
+    color: var(--main-color);
+    font-size: 2rem;
+}
+
+.valeur h3 {
+    margin: 0;
+    font-size: 1.35rem;
+    text-transform: capitalize;
+    color: #ffffff;
+}
+
+.valeur p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.82);
+    line-height: 1.8;
+}
+
+@media (max-width: 1024px) {
+    .valeur {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .a-propos-card {
+        grid-template-columns: 1fr;
+    }
+    
+    .Nos-valeurs {
+        padding: 3rem 1rem 2rem;
+    }
+    
+    .Nos-valeurs h1 {
+        font-size: 2rem;
+    }
+    
+    .img-histoire img {
+        width: 100%;
+        max-width: 500px;
+    }
+    
+    .histoire-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Contact page styling */
+
+.contact h1 {
+    text-transform: uppercase;
+    text-align: center;
+    color: #ffffff;
+    
+}
+.formulaire {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+    align-items: start;
+}
+.formulaire form {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
+}
+.formulaire .informations {
+    background: linear-gradient(180deg, rgba(255, 165, 0, 0.16), rgba(255, 165, 0, 0.035));
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.formulaire-label,
+label[for="message"] {
+    display: block;
+    margin-bottom: 0.55rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.92);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    font-size: 0.95rem;
+}
+.formulaire input,
+.formulaire textarea {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 1rem;
+    padding: 1rem 1rem;
+    color: #ffffff;
+    margin-bottom: 1.25rem;
+    transition: border-color 0.2s ease, transform 0.2s ease, background 0.2s ease;
+    font-family: inherit;
+}
+.formulaire input:focus,
+.formulaire textarea:focus {
+    outline: none;
+    border-color: rgba(255, 165, 0, 0.95);
+    box-shadow: 0 0 0 4px rgba(255, 165, 0, 0.12);
+    transform: translateY(-1px);
+    background: rgba(255, 255, 255, 0.12);
+}
+.formulaire textarea {
+    min-height: 170px;
+    resize: vertical;
+}
+.formulaire .btn {
+    width: 100%;
+    border-radius: 1rem;
+    padding: 1rem 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    background: linear-gradient(135deg, #ff9b03, #ffd174);
+    border: none;
+    color: #111111;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+.formulaire .btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.05);
+}
+.informations h3 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 1.8rem;
+}
+.texte-contact p {
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.8;
+}
+.contact-container {
+    display: grid;
+    gap: 1rem;
+}
+.contact-container p {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: rgba(255, 255, 255, 0.92);
+    font-weight: 600;
+    margin: 0;
+}
+.contact-container i {
+    color: var(--main-color);
+    font-size: 1.2rem;
+    min-width: 1.4rem;
+}
+.iframe {
+    padding: 0 1.5rem 3rem;
+    background: #060606;
+}
+.iframe h1 {
+    text-align: center;
+    color: #ffffff;
+    font-size: clamp(2rem, 4vw, 2.7rem);
+    margin-bottom: 1.7rem;
+}
+.iframe iframe {
+    width: 100%;
+    max-width: 1120px;
+    height: 450px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 1.5rem;
+    display: block;
+    margin: 0 auto;
+    background: #000;
+}
+
+@media (max-width: 992px) {
+    .formulaire {
+        grid-template-columns: 1fr;
+    }
+    .iframe iframe {
+        height: 360px;
+    }
+}
+
+@media (max-width: 640px) {
+    .contact {
+        padding-top: calc(var(--navbar-height) + 1.5rem);
+    }
+    .formulaire {
+        gap: 1.25rem;
+    }
+    .formulaire form,
+    .formulaire .informations {
+        padding: 1.5rem;
+    }
+    .formulaire .btn {
+        padding: 0.95rem;
+    }
+    .contact-container {
+        gap: 0.75rem;
+    }
+    .iframe {
+        padding: 0 1rem 2rem;
+    }
+}
 
