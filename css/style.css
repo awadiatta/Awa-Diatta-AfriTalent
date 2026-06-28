@@ -53,10 +53,13 @@ body.theme-light .btn-outline-light {
     background: rgba(255, 255, 255, 0.85) !important;
 }
 
-body.theme-light .hero::before {
-    background: rgba(255, 255, 255, 0.55);
+/* body.theme-light .hero::before { */
+    /* background: rgba(255, 255, 255, 0.55); */
+/* } */
+body.theme-light .hero h1,
+body.theme-light .hero h2 {
+    color: #fcf8f8 !important;
 }
-
 body.theme-light .carte1,
 body.theme-light .valeur,
 body.theme-light .tarif-card,
@@ -69,6 +72,14 @@ body.theme-light .card-principale {
     background: rgba(0, 0, 0, 0.03);
     color: #222222;
     border-color: rgba(0, 0, 0, 0.08);
+}
+body.theme-light .barre-recherche input,
+body.theme-light .barre-recherche select,
+body.theme-light .formulaire input,
+body.theme-light .formulaire textarea {
+    background: rgba(0, 0, 0, 0.05);
+    border-color: rgba(0, 0, 0, 0.12);
+    color: #222222;
 }
 
 body.theme-light .carte1:hover,
@@ -101,7 +112,7 @@ body.theme-light .valeur i {
 
 body.theme-light .site-footer,
 body.theme-light footer {
-    background-color: #f2f2f2 !important;
+    background-color: #f7d76f !important;
     color: #222 !important;
 }
 
@@ -125,6 +136,7 @@ body.theme-light .FAQ .accordion-button:not(.collapsed) {
 
 
 /* barre de navigation */
+
 .logo-afritalent{
     height: 60px;
     width: auto;
@@ -135,6 +147,31 @@ body.theme-light .FAQ .accordion-button:not(.collapsed) {
 .nav-link{
     color: var(--main-color);
 }
+
+.navbar.fixed-top {
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease;
+}
+
+.navbar.scrolled {
+    padding: 8px 16px;
+    background-color: rgba(17, 17, 17, 0.95)!important;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.navbar.scrolled .navbar-brand,
+.navbar.scrolled .nav-link {
+    color: #fff !important;
+}
+
+.navbar.scrolled .nav-link.active,
+.navbar.scrolled .nav-link:hover {
+    color: #f6b73f !important;
+}
+
+
+/* section hero   */
+
 .hero{
     background-image: url(../image/5d03b67d-d5ce-4619-ada5-aacb3979a19c.jpeg);
     background-size: cover;
@@ -334,6 +371,7 @@ body.theme-light .FAQ .accordion-button:not(.collapsed) {
 }
 
 /* page 3 freelances */
+
 .barre-recherche{
     display: flex;
     justify-content: center;
@@ -452,6 +490,7 @@ article ul{
 
 
 /* FAQ accordion styling */
+
 .FAQ{
     padding: 3rem 1.5rem 4rem;
 }
@@ -601,7 +640,6 @@ article ul{
 .Nos-valeurs h1 {
     grid-column: 1 / -1;
     margin: 0;
-    font-size: clamp(2.5rem, 4vw, 3.2rem);
     text-transform: uppercase;
     letter-spacing: 0.12em;
     color: #ffffff;
@@ -833,6 +871,54 @@ label[for="message"] {
     }
     .iframe {
         padding: 0 1rem 2rem;
+    }
+}
+
+#backToTop {
+    position: fixed;
+    right: 1.25rem;
+    bottom: 1.25rem;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--main-color);
+    color: #ffffff;
+    border: none;
+    display: grid;
+    place-items: center;
+    font-size: 1.25rem;
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(16px);
+    transition: opacity 0.25s ease, transform 0.25s ease, background 0.2s ease;
+    z-index: 9999;
+    cursor: pointer;
+}
+
+#backToTop.visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+#backToTop:hover {
+    background: #ffffff;
+    color: var(--main-color);
+}
+
+body.theme-light #backToTop {
+    background: var(--main-color);
+    color: #ffffff;
+}
+
+@media (max-width: 576px) {
+    #backToTop {
+        width: 44px;
+        height: 44px;
+        right: 1rem;
+        bottom: 1rem;
+        font-size: 1.1rem;
     }
 }
 
