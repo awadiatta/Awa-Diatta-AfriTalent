@@ -12,6 +12,7 @@
 		btn.innerHTML = theme === 'light' ? '<i class="bi bi-sun-fill"></i>' : '<i class="bi bi-moon-fill"></i>';
 	}
 	// init
+	
 	document.addEventListener('DOMContentLoaded', function(){
 		const btn = $(id);
 		if(!btn) return;
@@ -65,3 +66,42 @@ function updateNavbarScroll() {
 
 document.addEventListener('DOMContentLoaded', updateNavbarScroll);
 window.addEventListener('scroll', updateNavbarScroll, { passive: true });
+
+document.addEventListener('DOMContentLoaded', function () {
+	const statsContainer = document.querySelector('.stats-container');
+	if (!statsContainer) return;
+
+	const counters = Array.from(statsContainer.querySelectorAll('.counter-value'));
+	if (!counters.length) return;
+
+	function animateCounter(counter) {
+		if (counter.dataset.animated === 'true') return;
+
+		const target = Number(counter.dataset.target || counter.textContent.replace(/\D/g, '')) || 0;
+		const prefix = counter.dataset.prefix || '';
+		const suffix = counter.dataset.suffix || '';
+		const duration = 1300;
+		const startTime = performance.now();
+
+		function update(now) {
+			const progress = Math.min((now - startTime) / duration, 1);
+			const eased = 1 - Math.pow(1 - progress, 3);
+			const value = Math.round(target * eased);
+			counter.textContent = `${prefix}${value.toLocaleString('fr-FR')}${suffix}`;
+
+			if (progress < 1) {
+				requestAnimationFrame(update);
+			} else {
+				counter.textContent = `${prefix}${target.toLocaleString('fr-FR')}${suffix}`;
+				counter.dataset.animated = 'true';
+				counter.classList.add('is-animated');
+			}
+		}
+
+		requestAnimationFrame(update);
+	}
+
+	counters.forEach((counter, index) => {
+		setTimeout(() => animateCounter(counter), index * 150);
+	});
+});
