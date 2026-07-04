@@ -239,6 +239,42 @@ body.theme-light .FAQ .accordion-button:not(.collapsed) {
     margin: 0;
     color: rgba(255, 255, 255, 0.85);
 }
+
+.barre-de-filtre {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin: 2rem auto 1.5rem;
+    max-width: 900px;
+}
+
+.barre-de-filtre input,
+.barre-de-filtre select {
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 999px;
+    padding: 0.8rem 1rem;
+    min-width: 240px;
+    outline: none;
+}
+
+.barre-de-filtre input:focus,
+.barre-de-filtre select:focus {
+    border-color: var(--main-color);
+    box-shadow: 0 0 0 3px rgba(246, 183, 63, 0.2);
+}
+
+.freelance-card.is-hidden {
+    display: none;
+}
+
+.no-results {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+    font-weight: 600;
+}
+
 .section-header{
     text-align: center;
     padding-bottom: 40px;
@@ -808,6 +844,19 @@ label[for="message"] {
     transform: translateY(-2px);
     filter: brightness(1.05);
 }
+.form-error,
+.form-success {
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 0.92rem;
+    min-height: 1.3rem;
+}
+.form-error {
+    color: #f87d7d;
+}
+.form-success {
+    color: #c4f7a5;
+}
 .informations h3 {
     margin: 0;
     color: #ffffff;
@@ -865,7 +914,7 @@ label[for="message"] {
 }
 
 @media (max-width: 640px) {
-    .contact {
+    .contact { 
         padding-top: calc(var(--navbar-height) + 1.5rem);
     }
     .formulaire {

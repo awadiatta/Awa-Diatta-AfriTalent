@@ -52,28 +52,29 @@ aria-label="Toggle navigation">
  <section class="barre">
     <section class="barre-recherche">
         <div class="barre-de-filtre">
-       <input type="text" placeholder="rechercher">
-       <select>
-       <option value="">choisir un freelence</option>
-       <option value="">dévoleppeur web</option>
-       <option value="">administrateur réseau</option>
-       <option value="">data analyst</option>
-       <option value="">expert en cybersécurité</option>
-       <option value="">chef de projet informatique</option>
-       <option value="">technicien support</option>
-       <option value="">marketing digital</option>
-       <option value="">Assistante Virtuelle</option>
-       <option value="">programeurs</option>
+       <input id="freelanceSearch" type="text" placeholder="Rechercher un freelance">
+       <select id="freelanceFilter">
+       <option value="">Tous les métiers</option>
+       <option value="developpeur web">Développeur Web</option>
+       <option value="administrateur réseau">Administrateur réseau</option>
+       <option value="data analyst">Data analyst</option>
+       <option value="expert en cybersécurité">Expert en cybersécurité</option>
+       <option value="chef de projet informatique">Chef de projet informatique</option>
+       <option value="technicien support">Technicien support</option>
+       <option value="marketing digital">Marketing digital</option>
+       <option value="assistante virtuelle">Assistante Virtuelle</option>
+       <option value="programeurs">Programmers</option>
+       <option value="developpeur mobile">Développeur Mobile</option>
        </select>
         </div>
         </section>
-        <section class="nom freelances">
+        <section class="nos-freelances">
 
    <div class="container py-5">
-    <div class="row g-4">
+    <div id="freelanceGrid" class="row g-4">
 
         <!-- Carte 1 -->
-        <div class="col-md-4">
+        <div class="col-md-4 freelance-card" data-name="Mamadou Diallo" data-role="developpeur web">
             <div class="card shadow-sm h-100">
                 <img src="image/55579239-homme-avec-barbe-et-des-lunettes-opere-portable-a-l-interieur-une-les-donnees-centre-rempli-avec-les-serveurs-photo.jpg" class="card-img-top" alt="Freelance">
                 <div class="card-body">
@@ -91,7 +92,7 @@ aria-label="Toggle navigation">
         </div>
 
         <!-- Carte 2 -->
-        <div class="col-md-4">
+        <div class="col-md-4 freelance-card" data-name="Aïcha Ndiaye" data-role="administrateur réseau">
             <div class="card shadow-sm h-100">
                 <img src="image/téléchargement.jpg" class="card-img-top" alt="Freelance">
                 <div class="card-body">
@@ -108,7 +109,7 @@ aria-label="Toggle navigation">
         </div>
 
         <!-- Carte 3 -->
-        <div class="col-md-4">
+        <div class="col-md-4 freelance-card" data-name="Ibrahima Sow" data-role="data analyst">
             <div class="card shadow-sm h-100">
                 <img src="image/images (10).jpg" class="card-img-top" alt="Freelance">
                 <div class="card-body">
@@ -125,7 +126,7 @@ aria-label="Toggle navigation">
         </div>
 
         <!-- Carte 4 -->
-        <div class="col-md-4">
+        <div class="col-md-4 freelance-card" data-name="Fatou Kane" data-role="expert en cybersécurité">
             <div class="card shadow-sm h-100">
                 <img src="image/images.jpg" class="card-img-top" alt="Freelance">
                 <div class="card-body">
@@ -142,7 +143,7 @@ aria-label="Toggle navigation">
         </div>
 
         <!-- Carte 5 -->
-        <div class="col-md-4">
+        <div class="col-md-4 freelance-card" data-name="Cheikh Ba" data-role="chef de projet informatique">
             <div class="card shadow-sm h-100">
                 <img src="image/temoignag3.png" class="card-img-top"  alt="">
                 <div class="card-body">
@@ -159,7 +160,7 @@ aria-label="Toggle navigation">
         </div>
 
         <!-- Carte 6 -->
-        <div class="col-md-4">
+        <div class="col-md-4 freelance-card" data-name="Ndeye Fall" data-role="marketing digital">
             <div class="card shadow-sm h-100">
                 <img src="image/gettyimages-1411009525-612x612.jpg" class="card-img-top" alt="Freelance">
                 <div class="card-body">
@@ -176,7 +177,7 @@ aria-label="Toggle navigation">
         </div>
 
         <!-- Carte 7 -->
-        <div class="col-md-4">
+        <div class="col-md-4 freelance-card" data-name="Ousmane Gueye" data-role="developpeur mobile">
             <div class="card shadow-sm h-100">
                 <img src="image/images (4).jpg" class="card-img-top" alt="Freelance">
                 <div class="card-body">
@@ -193,7 +194,7 @@ aria-label="Toggle navigation">
         </div>
 
         <!-- Carte 8 -->
-        <div class="col-md-4">
+        <div class="col-md-4 freelance-card" data-name="Mariama Sy" data-role="assistante virtuelle">
             <div class="card shadow-sm h-100">
                 <img src="image/temoin4.png" class="card-img-top" alt="Freelance">
                 <div class="card-body">
@@ -210,7 +211,7 @@ aria-label="Toggle navigation">
         </div>
 
         <!-- Carte 9 -->
-        <div class="col-md-4">
+        <div class="col-md-4 freelance-card" data-name="Aliou Seck" data-role="programeurs">
             <div class="card shadow-sm h-100">
                 <img src="image/images (7).jpg" class="card-img-top" alt="Freelance">
                 <div class="card-body">

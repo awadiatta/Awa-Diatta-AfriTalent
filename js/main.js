@@ -68,6 +68,46 @@ document.addEventListener('DOMContentLoaded', updateNavbarScroll);
 window.addEventListener('scroll', updateNavbarScroll, { passive: true });
 
 document.addEventListener('DOMContentLoaded', function () {
+	const searchInput = document.getElementById('freelanceSearch');
+	const filterSelect = document.getElementById('freelanceFilter');
+	const cards = Array.from(document.querySelectorAll('.freelance-card'));
+	const grid = document.getElementById('freelanceGrid');
+
+	if (!searchInput || !filterSelect || !cards.length || !grid) return;
+
+	function applyFilters() {
+		const query = searchInput.value.trim().toLowerCase();
+		const role = filterSelect.value.trim().toLowerCase();
+		let visibleCount = 0;
+
+		cards.forEach((card) => {
+			const name = card.dataset.name?.toLowerCase() || '';
+			const cardRole = card.dataset.role?.toLowerCase() || '';
+			const matchesQuery = !query || name.includes(query) || cardRole.includes(query);
+			const matchesRole = !role || cardRole.includes(role);
+			const isVisible = matchesQuery && matchesRole;
+
+			card.classList.toggle('is-hidden', !isVisible);
+			if (isVisible) visibleCount++;
+		});
+
+		const existingMessage = grid.querySelector('.no-results');
+		if (existingMessage) existingMessage.remove();
+
+		if (!visibleCount) {
+			const emptyState = document.createElement('div');
+			emptyState.className = 'no-results col-12';
+			emptyState.textContent = 'Aucun freelance ne correspond à votre recherche.';
+			grid.appendChild(emptyState);
+		}
+	}
+
+	searchInput.addEventListener('input', applyFilters);
+	filterSelect.addEventListener('change', applyFilters);
+	applyFilters();
+});
+
+document.addEventListener('DOMContentLoaded', function () {
 	const statsContainer = document.querySelector('.stats-container');
 	if (!statsContainer) return;
 
@@ -104,4 +144,72 @@ document.addEventListener('DOMContentLoaded', function () {
 	counters.forEach((counter, index) => {
 		setTimeout(() => animateCounter(counter), index * 150);
 	});
+})
+
+
+document.addEventListener('DOMContentLoaded', function () {
+	const form = document.querySelector('.contact-form');
+	if (!form) return;
+
+	const nom = document.getElementById('nom');
+	const prenom = document.getElementById('prenom');
+	const email = document.getElementById('email');
+	const message = document.getElementById('message');
+
+	const nomError = document.getElementById('nomError');
+	const prenomError = document.getElementById('prenomError');
+	const emailError = document.getElementById('emailError');
+	const messageError = document.getElementById('messageError');
+	const successMessage = document.getElementById('successMessage');
+
+	function clearValidation() {
+		nomError.textContent = '';
+		prenomError.textContent = '';
+		emailError.textContent = '';
+		messageError.textContent = '';
+		successMessage.textContent = '';
+	}
+
+	function isValidEmail(value) {
+		return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+	}
+
+	form.addEventListener('input', clearValidation);
+
+	form.addEventListener('submit', function (event) {
+		event.preventDefault();
+		clearValidation();
+
+		let isValid = true;
+		const nomValue = nom.value.trim();
+		const prenomValue = prenom.value.trim();
+		const emailValue = email.value.trim();
+		const messageValue = message.value.trim();
+
+		if (nomValue.length < 2) {
+			nomError.textContent = 'Le nom doit contenir au moins 2 caractères.';
+			isValid = false;
+		}
+
+		if (prenomValue.length < 2) {
+			prenomError.textContent = 'Le prénom doit contenir au moins 2 caractères.';
+			isValid = false;
+		}
+
+		if (!isValidEmail(emailValue)) {
+			emailError.textContent = 'Adresse email invalide.';
+			isValid = false;
+		}
+
+		if (messageValue.length < 20) {
+			messageError.textContent = 'Le message doit contenir au moins 20 caractères.';
+			isValid = false;
+		}
+
+		if (isValid) {
+			successMessage.textContent = 'Message envoyé avec succès !';
+			form.reset();
+		}
+	});
 });
+
