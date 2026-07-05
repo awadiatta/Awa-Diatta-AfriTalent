@@ -245,7 +245,7 @@ body.theme-light .FAQ .accordion-button:not(.collapsed) {
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
-    margin: 2rem auto 1.5rem;
+    margin:auto ;
     max-width: 900px;
 }
 
@@ -279,6 +279,50 @@ body.theme-light .FAQ .accordion-button:not(.collapsed) {
     text-align: center;
     padding-bottom: 40px;
 }
+
+
+
+.barre h1 {
+    padding: 1rem ;
+    font-size: 2.8rem;
+
+}
+
+.notre-histoire h1,
+.a-propos h1 {
+    padding: 1.5rem 0;
+    font-size: 2.5rem;
+}
+
+.nos-tarifs h1 {
+    padding: 2rem 0 1.5rem 0;
+    font-size: 2.5rem;
+}
+
+body.theme-light section h1 {
+    background: linear-gradient(135deg, #d17e00, #ff9b03);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+@media (max-width: 767px) {
+    section h1 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .barre h1 {
+        font-size: 2rem;
+    }
+    
+    .notre-histoire h1,
+    .a-propos h1,
+    .nos-tarifs h1 {
+        font-size: 1.8rem;
+    }
+}
+
 
 
 
@@ -376,7 +420,8 @@ body.theme-light .FAQ .accordion-button:not(.collapsed) {
     background-color: var(--main-color);
     color: var(--text-color);
     text-align: center;
-    padding: 3rem 1.5rem;
+    padding: 2rem ;
+
 }
 .CTA-texte p{
     font-size: clamp(1.5rem, 2vw, 2.5rem);
